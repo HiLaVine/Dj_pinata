@@ -8,4 +8,9 @@
     background-image: linear-gradient(to right, #1591C9, #FF26C6); /* Gradiente personalizado */
   }
 
+  .bg-custom-gradient-alt {
+    background-image: linear-gradient(to right, #FC45FC,#26C65C); /* Gradiente personalizado */
+  }
+
+
 /*Dejo el coloreado en tus manos jaja, voy a las secciones*/

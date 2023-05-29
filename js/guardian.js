@@ -1,6 +1,6 @@
 const form = document.getElementById("formdj")
 const inputs = document.querySelectorAll('#formdj input')
-const sselect = document.querySelector(form.evento)
+
 
 const expresiones = {
 	nombre: /^[a-zA-ZÁ-Ÿ\s]{1,40}$/,
@@ -71,38 +71,7 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validaFormulario);
 });
 
-selects.forEach((input) =>{
-	input.addEventListener('', validaFormulario)
-})
-
 form.addEventListener("submit", e=>{
 	e.preventDefault();
 
 });
-
-
-
-/*
-form.addEventListener("submit", e=>{
-	e.preventDefault()
-	let warnings = ""
-	let entrar = false
-	let regexEmail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/
-	parrafo.innerHTML = ""
-	if (nombre.value.length <= 0) {
-		warnings += `El campo 'Nombre' esta vacio <br>`
-		entrar = true	
-	}
-	
-	if (!regexEmail.test(email.value)) {
-		warnings += `El email no es valido <br>`
-		entrar = true
-	}
-
-	if (entrar) {
-		parrafo.innerHTML = warnings
-	}else{
-		parrafo	= "Enviado"
-	}
-})
-*/

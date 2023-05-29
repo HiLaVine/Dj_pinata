@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inicio de sesión</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style1.css">
+  
+</head>
+<body>
+    <div class="bg-custom-gradient">
+    <nav class="navbar navbar-light navbar-expand-lg bg-light ">
+        <div class="container-fluid">
+           <a class="navbar-brand" href="#">
+           <img src="imgs/DJ.png" alt="" width="50" class="d-inline-block align-text-top">
+           </a>
+           <a class="navbar-brand" href="#">
+            <img src="imgs/djLetrasSinFondo.png" alt="" width="120" class="d-inline-block align-text-top">
+            </a>
+           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                 <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                 <a class="nav-link" href="servicios.html">Servicios</a>
+                 <a class="nav-link" href="conocenos.html">Conocenos</a>
+                 <a class="nav-link" href="recintos.html">Recintos</a>
+                 <a class="nav-link" href="repertorio.html">Repertorio</a>
+                 <a class="nav-link" href="paquetes.html">Paquetes</a>
+                 <a class="nav-link" href="contratacion.html">Contratación</a>
+                 <a class="nav-link" href="loginAdmin.html"> Admin</a>
+                 <a class="nav-link" href="LoginCom.html"> Comprobante</a>
+              </div>
+           </div>
+        </div>
+     </nav>
+     <br>
+     <div class="container " >
+        <div class="row " style="border-radius:12px; background-color: #ffffff;">
+              <p align="justify" style="color: black ">Si deseas volver a descargar tu Comprobante en PDF introduce tu CURP y el Id de compra que se te proporciono cuando completaste tu pedido.  </p> 
+        </div>
+
+  <div class="cont">
+    <h2>Recuperacion del PDF</h2>
+    <form>
+      <div class="mb-3">
+        <label for="username" class="form-label">Id de compra:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+      </div>
+      <div class="mb-3">
+        <label for="text" class="form-label">Curp:</label>
+        <input type="password" class="form-control" id="password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+</body>
+</html>

@@ -1,12 +1,13 @@
 const form = document.getElementById("formdj")
 const inputs = document.querySelectorAll('#formdj input')
+const sselect = document.querySelector(form.evento)
 
 const expresiones = {
 	nombre: /^[a-zA-ZÁ-Ÿ\s]{1,40}$/,
 	telefono: /^\d{10,10}$/,
-	rfc: /^[a-zA-ZÁ-Ÿ\s]{13,13}$/,
+	rfc: /^[a-zA-Z0-9\_\-]{18,18}$/,
 	email: /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/,
-	nump: /^\d{30,100}$/
+	nump: /^\d{1,3}$/
 }
 
 const validaFormulario = (e) => {
@@ -21,10 +22,10 @@ const validaFormulario = (e) => {
 			validarCampo(expresiones.nombre, e.target, 'apellidoM');
 		break;
 		case "fechaN":
-			
+			existeFecha(e.target.value);
 		break;
-		case "rfc":
-			validarCampo(expresiones.rfc, e.target, 'rfc');
+		case "curp":
+			validarCampo(expresiones.rfc, e.target, 'curp');
 		break;
 		case "mail":
 			validarCampo(expresiones.email, e.target, 'mail');
@@ -33,7 +34,7 @@ const validaFormulario = (e) => {
 			validarCampo(expresiones.telefono, e.target, 'telefono');
 		break;
 		case "personas":
-			if (e.target.value<30 || e.target.value>100) {
+			if (e.target.value<75 || e.target.value>200) {
 				document.getElementById('gpersonas').classList.add('formincorrecto');
 				document.getElementById('gpersonas').classList.remove('formcorrecto');
 				document.querySelector('#gpersonas .inputError').classList.add('inputErrorActivo');
@@ -41,6 +42,13 @@ const validaFormulario = (e) => {
 				document.getElementById('gpersonas').classList.remove('formincorrecto');
 				document.getElementById('gpersonas').classList.add('formCorrecto');
 				document.querySelector('#gpersonas .inputError').classList.remove('inputErrorActivo');
+			}
+		break;
+		case "evento":
+			if (e.target.value == 'otros') {
+				document.querySelector('#gopcion #opcion .copcion').classList.add('inputOpcionActiva');
+			} else {
+				document.querySelector('#gopcion #opcion .copcion').classList.remove('inputOpcionActiva');
 			}
 		break;
 	}
@@ -63,11 +71,16 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validaFormulario);
 });
 
+selects.forEach((input) =>{
+	input.addEventListener('', validaFormulario)
+})
+
 form.addEventListener("submit", e=>{
 	e.preventDefault();
 
 });
-const email = document.getElementById("mail")
+
+
 
 /*
 form.addEventListener("submit", e=>{

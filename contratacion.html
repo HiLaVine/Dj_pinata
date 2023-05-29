@@ -1,272 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style1.css">
-    <link rel="icon" href="imgs/DJ.png" type="image/png">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <title>Contratacion</title>
-</head>
-<body>
-    <div class="bg-custom-gradient">
-    <!--Nav bar en este apartado se construye el menu responsive-->
-    <nav class="navbar navbar-light navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+<html>
+    <head>
+        <title>Formulario de registro</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style type="text/css">
+ 	      @import url(estilos.css);
+        </style>
+        <link rel="stylesheet" href="css/style2.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-light navbar-expand-lg bg-light " style="background-color: #FC45FC,#26C65C;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
                 <img src="imgs/DJ.png" alt="" width="50" class="d-inline-block align-text-top">
                 </a>
                 <a class="navbar-brand" href="#">
-                 <img src="imgs/djLetrasSinFondo.png" alt="" width="120" class="d-inline-block align-text-top">
-                 </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-               <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
-               <a class="nav-link" href="servicios.html">Servicios</a>
-               <a class="nav-link" href="conocenos.html">Conocenos</a>
-               <a class="nav-link" href="recintos.html">Recintos</a>
-               <a class="nav-link" href="repertorio.html">Repertorio</a>
-               <a class="nav-link" href="paquetes.html">Paquetes</a>
-               <a class="nav-link" href="contratacion.html">Contratación</a>
-               <a class="nav-link" href="loginAdmin.html"> Admin</a>
-               <a class="nav-link" href="LoginCom.html"> Comprobante</a>
+                <img src="imgs/djLetrasSinFondo.png" alt="" width="120" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                     <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                     <a class="nav-link" href="servicios.html">Servicios</a>
+                     <a class="nav-link" href="conocenos.html">Conocenos</a>
+                     <a class="nav-link" href="recintos.html">Recintos</a>
+                     <a class="nav-link" href="repertorio.html">Repertorio</a>
+                     <a class="nav-link" href="paquetes.html">Paquetes</a>
+                     <a class="nav-link" href="contratacion.html">Contratación</a>
+                     <a class="nav-link" href="loginAdmin.html"> Admin</a>
+                     <a class="nav-link" href="LoginCom.html"> Comprobante</a>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-    </nav>
-    <!--Fin del navbar-->
-    <br> <br>
-    <!--Formulario-->
-    <div class="container">
-        <br><br><br>
-        <form method="post" action="pdf_gen.php" style="background-color:white; border-style: solid;  border:8px; border-radius:10px; border-color:white !important; padding:10px;" id="registro">
-            <div class="title">
-                <h1>Formulario de reservación/contratación</h1>
+         </nav>
+
+    <div class="Formulario" style="justify-content: center; align-items: center; display: flex; height: 1200px;">
+        <form id="formdj" method="post">
+            <h1>Contacto</h1>
+            <div class="form">
+
+                <div class="grupo" id="gnombre">
+                    <label for="nombre">Nombre:</label>
+                         <div class="formInput">
+                             <input type="text" id="nombre" name="nombre"><span class="barra"></span>
+                         </div>
+                         <p class="inputError">Los datos ingresados son invalidos</p>
+                </div>
+
+                <div class="grupo" id="gapellidoP">
+                    <label for="apellidoP">Apellido Paterno:</label>
+                         <div class="formInput">
+                             <input type="text" id="apellidoP" name="apellidoP"><span class="barra"></span>
+                         </div>
+                         <p class="inputError">Los datos ingresados son invalidos</p>
+                </div>
+
+                <div class="grupo" id="gapellidoM">
+                    <label for="apellidoM">Apellido Materno:</label>
+                         <div class="formInput">
+                             <input type="text" id="apellidoM" name="apellidoM"><span class="barra"></span>
+                         </div>
+                         <p class="inputError">Los datos ingresados son invalidos</p>
+                </div>
+
+                <div class="grupo" id="gfecha">
+                    <label for="fechaN">Fecha de Nacimiento</label>
+                         <div class="formInput">
+                             <input type="date" id="fechaN" name="fechaN"  max="2005-05-28" min="1945-05-28" required><span class="barra"></span>
+                         </div>
+                         <p class="inputError">La fecha es invalida</p>
+                </div>
+
+                <div class="grupo" id="gcurp">
+                    <label for="curp">CURP:</label>
+                         <div class="formInput">
+                             <input type="text" id="curp" name="curp"><span class="barra"></span>
+                         </div>
+                         <p class="inputError">Los datos ingresados son invalidos</p>
+                </div>
+
+                <div class="grupo" id="gmail">
+                    <label for="mail">Correo electronico:</label>
+                         <div class="formInput">
+                             <input type="email" id="mail" name="mail"><span class="barra"></span>
+                         </div>
+                         <p class="inputError">El correo ingresado es invalido</p>
+                </div>
+
+                <div class="grupo" id="gtelefono">
+                    <label for="telefono">Numero de Telefono:</label>
+                         <div class="formInput">
+                             <input type="text" id="telefono" name="telefono"><span class="barra"></span>
+                         </div>
+                         <p class="inputError">El numero telefonico es invalido</p>
+                </div>
+
+                <div class="grupo" id="gentidad">
+                    <select id="entidadF" name="entidadF" size="1">
+                        <option value="aguasC">Aguascalientes</option>
+                        <option value="bajaC">Baja California</option>
+                        <option value="bajaS">Baja California Sur</option>
+                        <option value="campeche">Campeche</option>
+                        <option value="chiapas">Chiapas</option>
+                        <option value="chihuahua">Chihuahua</option>
+                        <option value="cdmx">Ciudad de Mexico</option>
+                        <option value="coahuila">Coahuila</option>
+                        <option value="colima">Colima</option>
+                        <option value="durango">Durango</option>
+                        <option value="guanajuato">Guanajuato</option>
+                        <option value="guerrero">Guerrero</option>
+                        <option value="hidalgo">Hidalgo</option>
+                        <option value="jalisco">Jalisco</option>
+                        <option value="mexico">Mexico</option>
+                        <option value="michoacan">Michoacan</option>
+                        <option value="morelos">Morelos</option>
+                        <option value="nayarit">Nayarit</option>
+                        <option value="nuevoL">Nuevo Leon</option>
+                        <option value="oaxaca">Oaxaca</option>
+                        <option value="puebla">Puebla</option>
+                        <option value="queretaro">Queretaro</option>
+                        <option value="quintanaR">Quintana Roo</option>
+                        <option value="sanL">San Luis Potosi</option>
+                        <option value="sinaloa">Sinaloa</option>
+                        <option value="sonora">Sonora</option>
+                        <option value="tabasco">Tabasco</option>
+                        <option value="tamaulipas">Tamaulipas</option>
+                        <option value="tlaxcala">Tlaxcala</option>
+                        <option value="veracruz">Veracruz</option>
+                        <option value="yucatan">Yucatan</option>
+                        <option value="zacatecas">Zacatecas</option>
+                    </select>
+                    <label for="entidadF">Entidad Federativa:</label>
+                </div>
+
+                <div class="grupo" id="galcaldia">
+                    <select id="alcaldia" name="alcaldia" size="1">
+                        <option value="alvaroO">Álvaro Obregón</option>
+                        <option value="azcapotzalco">Azcapotzalco</option>
+                        <option value="benitoJ">Benito Juárez</option>
+                        <option value="coyoacan">Coyoacán</option>
+                        <option value="cuajimalpaM">Cuajimalpa de Morelos</option>
+                        <option value="cuahutemoc">Cuauhtémoc</option>
+                        <option value="gustavoM">Gustavo A. Madero</option>
+                        <option value="iztacalco">Iztacalco</option>
+                        <option value="iztapalapa">Iztapalapa</option>
+                        <option value="magdalenaC">Magdalena Contreras</option>
+                        <option value="miguelH">Miguel Hidalgo</option>
+                        <option value="milpaA">Milpa Alta</option>
+                        <option value="tlahuac">Tláhuac</option>
+                        <option value="tlalpan">Tlalpan</option>
+                        <option value="venustianoC">Venustiano Carranza</option>
+                        <option value="xochimilco">Xochimilco</option>
+                    </select>
+                    <label for="alcaldia">Alcaldia:</label>
+                </div>
+
+                <div></div>
+                <div></div>
+
             </div>
-            <br>
-            <fieldset>
-                <legend>Contacto</legend>
-                <div class="row">
-                    <div class="col-md-4 ml-auto">
-                        <label for="apPatD">Primer Apellido</label>
-                        <input type="text" name="apPatD" class="form-control" id="apPat" required pattern="^((([A-ZÁÉÍÓÚÑ]{1})[a-záéíóúñ]+\s?){1,3})$">
-                    </div>
-                    <div class="col-md-4 ml-auto">
-                        <label for="apMatD">Segundo Apellido</label>
-                        <input type="text" name="apMatD" class="form-control" id="apMat" required pattern="^((([A-ZÁÉÍÓÚÑ]{1})[a-záéíóúñ]+\s?){1,3})$">
-                    </div>
-                    <div class="col-md-4 ml-auto">
-                        <label for="nombreD">Nombre (s)</label>
-                        <input type="text" name="nombreD" class="form-control" id="nombre" required pattern="^((([A-ZÁÉÍÓÚÑ]{1})[a-záéíóúñ]+\s?){1,3})$">
-                    </div>
+
+            <h1>Evento</h1>
+
+            <div class="form">
+                <div class="grupo" id="gevento">
+                    <select id="evento" name="evento" size="1">
+                        <option value="bautizo">Bautizo</option>
+                        <option value="primeraC">Primera Comunion</option>
+                        <option value="xv">XV Años</option>
+                        <option value="cumpleaños">Cumpleaños</option>
+                        <option value="boda">Boda</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    <label for="evento">Tipo de Evento:</label>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col">
-                        <label for="curpN">RFC</label>
-                        <input type="text" class="form-control" name="curpN" required pattern="^([A-Z]{4}[0-9]{6}[A-Z]{6}[A-Z0-9]{2})$">
-                    </div>
+
+                <div class="grupo" id="gopcion">
+                    <label for="opcion">Evento (otro):</label>
+                         <div class="formInput" id="opcion">
+                             <input class="copcion" type="text" id="opcion" name="opcion"><span class="barra"></span>
+                         </div>
+                         <p class="inputError">Los datos ingresados son invalidos</p>
                 </div>
-                <br>
-                <h5>Domicilio Particular</h5>
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="calle">Calle</label>
-                        <input type="text" class="form-control" id="calle" name="calle" required>
-                    </div>
-                    <div class="col-md-3 ml-auto">
-                        <label for="numExt">Numero Ext</label>
-                        <input type="text" class="form-control" id="numExt" name="numExt" required pattern="^([0-9]{4})|([0-9]{3})|([0-9]{2})|([0-9]{1})$">
-                    </div>
-                    <div class="col-md-3 ml-auto">
-                        <label for="numInt">Numero Int</label>
-                        <input type="text" class="form-control" id="numInt" name="numInt" pattern="^([0-9]{4})|([0-9]{3})|([0-9]{2})|([0-9]{1})$">
-                    </div>
+
+                <div class="grupo" id="gpersonas">
+                    <label for="personas">Numero de Personas:</label>
+                         <div class="formInput">
+                             <input type="number" id="personas" name="personas"><span class="barra"></span>
+                         </div>
+                         <p class="inputError">El numero de personas es invalido</p>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-6 ml-auto">
-                        <label for="colonia">Colonia</label>
-                        <input type="text" class="form-control" id="colonia" name="colonia" required>
-                    </div>
-                    <div class="col-md-6 ml-auto">
-                        <label for="alcaldia">Alcaldia o Municipio</label>
-                        <input type="text" class="form-control" id="alcaldia" name="alcaldia" required>
-                    </div>
+
+                <div class="grupo" id="ghorarios">
+                    <select id="horario" name="horario" size="1">
+                        <option value="viernes">Viernes de 12:00pm - 2:00am</option>
+                        <option value="sabado">Sabados de 2:00pm - 2:00am</option>
+                        <option value="domingo">Domingos de 9:00am - 2:pm</option>
+                    </select>
+                    <label for="horario">Horario:</label>
                 </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-6 ml-auto">
-                        <label for="entidadfed">Entidad Federativa</label>
-                        <select class="form-select" aria-label="Default select example" id="entidadfed" name="entidadfed" required>
-                            <option value="" disabled selected>Selecciona una opción</option>
-                            <option value="Aguascalientes">Aguascalientes</option>
-                            <option value="Baja California Norte">Baja California</option>
-                            <option value="Baja California Sur">Baja California Sur</option>
-                            <option value="Campeche">Campeche</option>
-                            <option value="Chiapas">Chiapas</option>
-                            <option value="Chihuahua">Chihuahua</option>
-                            <option value="Ciudad de Mexico">Ciudad de México</option>
-                            <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
-                            <option value="Colima">Colima</option>
-                            <option value="Durango">Durango</option>
-                            <option value="Guanajuato">Guanajuato</option>
-                            <option value="Guerrero">Guerrero</option>
-                            <option value="Hidalgo">Hidalgo</option>
-                            <option value="Jalisco">Jalisco</option>
-                            <option value="Estado de Mexico">Estado de México</option>
-                            <option value="Michoacan">Michoacán</option>
-                            <option value="Morelos">Morelos</option>
-                            <option value="Nayarit">Nayarit</option>
-                            <option value="Nuevo Leon">Nuevo León</option>
-                            <option value="Oaxaca">Oaxaca</option>
-                            <option value="Puebla">Puebla</option>
-                            <option value="Queretaro">Querétaro</option>
-                            <option value="Quintana Roo">Quintana Roo</option>
-                            <option value="San Luis Potosi">San Luis Potosí</option>
-                            <option value="Sinaloa">Sinaloa</option>
-                            <option value="Sonora">Sonora</option>
-                            <option value="Tabasco">Tabasco</option>
-                            <option value="Tamaulipas">Tamaulipas</option>
-                            <option value="Tlaxcala">Tlaxcala</option>
-                            <option value="Veracruz">Veracruz</option>
-                            <option value="Yucatan">Yucatán</option>
-                            <option value="Zacatecas">Zacatecas</option>
-                        </select>
-                    </div>
- 
-                    <div class="col-md-6 ml-auto">
-                        <label for="cp">C.P.</label>
-                        <input type="text" class="form-control" id="cp" name="cp" required pattern="^[0-9]{5}$">
-                    </div>
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-md-4 ml-auto">
-                        <label for="telfijo">Telefono fijo</label>
-                        <input type="tel" class="form-control" id="telfijo" name="telfijo" pattern="^[0-9]{10}$">
-                    </div>
-                    <div class="col-md-4 ml-auto">
-                        <label for="telcel">Tel. Celular</label>
-                        <input type="tel" class="form-control" id="telcel" name="telcel" required pattern="^[0-9]{10}$">
-                    </div>
-                    <div class="col-md-4 ml-auto">
-                        <label for="correo">Correo Electronico</label>
-                        <input type="email" name="correo" class="form-control" required pattern="^([a-záéíóúñüA-ZÁÉÍÓÚÑÜ0-9.\-_/\\]+@\w+(\.\w+)+)$">
-                    </div>
-                </div>
-                <br>
-            </fieldset>
-            <br>
-            <div class="row">
-                <div class="col-md-3 ml-auto">
-                    <input class="btn btn-primary btn-lg " type="submit" value="Enviar" id="enviar">
-                </div>
-                <div class="col-md-3 ml-auto">
-                    <button class="btn btn-secondary btn-lg " type="button" id="limpiar">Limpiar</button>
-                </div>
-            </div>      
+
+                <div></div>
+                <div></div>
+                <div></div>
+
+                <div style="padding-left: 0px;"><button type="submit" class="enviar" style="text-align: center;">Enviar</button></div>
+                <div style="padding-left: 70px;"><button type="reset" value="Borrar" style="text-align: center;">Limpiar</button></div>
+
+            </div>
+
         </form>
-        <br><br><br><br>
     </div>
-    <!--Fin formulario-->
-   
-    <script src="js/formcontrol.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#Conyuge").hide();
-            $("#extrasC").click(function(){
-                if($(this).is(':checked')){
-                    $("#Conyuge").show();
-                } else {
-                    $("#Conyuge").hide();
-                }
-            });
-            $("#limpiar").click(function(){
-                $("#registro select").each(function() { this.selectedIndex = 0 });
-                $("#registro input[type=text] , #registro textarea").each(function() { this.value = '' });
-                $("#registro input[type=tel] , #registro textarea").each(function() { this.value = '' });
-                $("#registro input[type=date] , #registro textarea").each(function() { this.value = '' });
-                $("#registro input[type=file] , #registro textarea").each(function() { this.value = '' });
-                $("#registro input[type=email] , #registro textarea").each(function() { this.value = '' });
-                $("#registro input[type=checkbox] , #registro textarea").each(function() { this.checked=false });
-                $("#Conyuge").hide();
-            });
-            $("#registro").submit(function(e){
-                e.preventDefault();
-                if(confirm("El formulario está por enviarse, ¿Desea enviar el fomulario? o ¿Desea editarlo?")){
-                    var data = $('#registro').serialize();
-                    console.log(data);
-                    $.ajax({
-                        type:'post',
-                        url:'savedata.php',
-                        data:data,
-                        success:function(r){
-                            alert("Registro Exitoso");
-                            $("#registro").unbind('submit').submit()
-                            if(r==1){
-                                alert("Registro Exitoso");
-                                
-                            }
-                        }
-                    }).fail(function(jqXHR,textStatus,errorThrown){
-                         alert('Error!!');
-                    });
-                    $.redirect('pdf_gen.php', data);
-                    $("#registro").unbind('submit').submit()
-                }
-                else{
-                }
-               
-                $("#Conyuge").hide();
-            });
-
-            $("#fechnac").change(function(fecha){
-                var hoy = new Date();
-                var cumpleanos = new Date(fecha.target.value);
-                var edad = hoy.getFullYear() - cumpleanos.getFullYear();
-                var m = hoy.getMonth() - cumpleanos.getMonth();
-                
-                if (m < 0 || (m === 0 && hoy.getDate() < cumpleanos.getDate())) {
-                    edad--;
-                }
-                document.getElementById("anos").value = edad
-
-                if (m < 0) {
-                    m += 12;
-                }
-                document.getElementById("meses").value = m
-                if(edad == 0){
-                    document.getElementById("grupo").value = "LacIyII"
-                }else if(edad==1){
-                    document.getElementById("grupo").value = "Lactante III - Maternal I"
-                }else if(edad==2 && m<=6){
-                    document.getElementById("grupo").value = "Maternal IIA "
-                }else if(edad==2 && m>6){
-                    document.getElementById("grupo").value = "Maternal IIB"
-                }else if(edad==3){
-                    document.getElementById("grupo").value = "Preescolar IA y Preescolar IB"
-                }else if(edad==4){
-                    document.getElementById("grupo").value = "Preescolar IIA y Preescolar IIB"
-                }else if(edad==5){
-                    document.getElementById("grupo").value = "Preescolar IIIA y Preescolar IIIB"
-                }
-            });
-
-
-           
-        });
-    </script>
-    
-</body>
-</html>
-</div>
+        <script type="text/javascript" src="js/guardian.js"></script>
 </body>
 </html>

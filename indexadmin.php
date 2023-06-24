@@ -11,10 +11,10 @@
     <div class="bg-custom-gradient">
     <nav class="navbar navbar-light navbar-expand-lg bg-light ">
         <div class="container-fluid">
-           <a class="navbar-brand" href="#">
+           <a class="navbar-brand" href="index.html">
            <img src="imgs/DJ.png" alt="" width="50" class="d-inline-block align-text-top">
            </a>
-           <a class="navbar-brand" href="#">
+           <a class="navbar-brand" href="index.html">
             <img src="imgs/djLetrasSinFondo.png" alt="" width="120" class="d-inline-block align-text-top">
             </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">

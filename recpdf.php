@@ -24,27 +24,35 @@
               <div class="navbar-nav">
                  <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                  <a class="nav-link" href="contratacion.html">Contratación</a>
-                 <a class="nav-link" href="loginAdmin.html"> Admin</a>
-                 <a class="nav-link" href="LoginCom.html"> Comprobante</a>
+                 <a class="nav-link" href="indexadmin.php"> Admin</a>
+                 <a class="nav-link" href="recpdf.php"> Comprobante</a>
               </div>
            </div>
         </div>
      </nav>
+     <br>
+     <div class="container " >
+      <br><br><br><br><br><br><br>
+        <div class="row " style="border-radius:12px; background-color: #ffffff;">
+              <p align="center" style="color: black ">Si deseas volver a descargar tu Comprobante en PDF introduce tu fecha de nacimiento en el formato yyyy/mm/dd y tu curp. </p> 
+        </div>
+
   <div class="cont">
-    <h2>Sesion de administrador</h2>
-    <form>
+    <h2>Recuperacion del PDF</h2>
+    <form method="post" action="genpdf.php">
       <div class="mb-3">
-        <label for="username" class="form-label">Usuario:</label>
-        <input type="text" class="form-control" id="username" name="username" required>
+        <label for="username" class="form-label">Fecha de nacimiento:</label>
+        <input type="text" class="form-control" id="fechaN" name="fechaN" required>
       </div>
       <div class="mb-3">
-        <label for="password" class="form-label">Contraseña:</label>
-        <input type="password" class="form-control" id="password" name="password" required>
+        <label for="text" class="form-label">Curp:</label>
+        <input type="text" class="form-control" id="curp" name="curp" required>
       </div>
-      <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+      <button type="submit" class="btn btn-primary">Recuperar PDF</button>
     </form>
   </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </div>
 </body>

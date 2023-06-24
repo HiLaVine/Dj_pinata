@@ -30,27 +30,21 @@
            </div>
         </div>
      </nav>
-     <br>
-     <div class="container " >
-        <div class="row " style="border-radius:12px; background-color: #ffffff;">
-              <p align="center" style="color: black ">Si deseas volver a descargar tu Comprobante en PDF introduce tu CURP y la fecha en la se llevara a cabo el evento en el formato dd/mm/aaaa. </p> 
-        </div>
-
   <div class="cont">
-    <h2>Recuperacion del PDF</h2>
-    <form>
+    <h2>Sesion de administrador</h2>
+    <form action="validar.php" method="post">
       <div class="mb-3">
-        <label for="username" class="form-label">Fecha del evento:</label>
+        <label for="username" class="form-label">Usuario:</label>
         <input type="text" class="form-control" id="username" name="username" required>
       </div>
       <div class="mb-3">
-        <label for="text" class="form-label">Curp:</label>
+        <label for="password" class="form-label">Contraseña:</label>
         <input type="password" class="form-control" id="password" name="password" required>
       </div>
-      <button type="submit" class="btn btn-primary">Recuperar PDF</button>
+      <button type="submit" class="btn btn-primary">Iniciar sesión</button>
     </form>
   </div>
-  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </div>
 </body>

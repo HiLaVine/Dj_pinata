@@ -146,7 +146,7 @@
             <td><?php echo $filas['estado']?></td>
             <td><?php echo $filas['alcaldia']?></td>
             <td><?php echo $filas['evento']?></td>
-            <td><?php echo $filas['nPersonas']?></td>
+            <td><?php echo $filas['npersonas']?></td>
             <td><?php echo $filas['horario']?></td>
             <td><?php echo $filas['folio']?></td>
             <td>

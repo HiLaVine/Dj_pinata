@@ -11,10 +11,10 @@
     <div class="bg-custom-gradient">
     <nav class="navbar navbar-light navbar-expand-lg bg-light ">
         <div class="container-fluid">
-           <a class="navbar-brand" href="index.html">
+           <a class="navbar-brand" href="#">
            <img src="imgs/DJ.png" alt="" width="50" class="d-inline-block align-text-top">
            </a>
-           <a class="navbar-brand" href="index.html">
+           <a class="navbar-brand" href="#">
             <img src="imgs/djLetrasSinFondo.png" alt="" width="120" class="d-inline-block align-text-top">
             </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,7 +25,7 @@
                  <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                  <a class="nav-link" href="contratacion.html">Contratación</a>
                  <a class="nav-link" href="indexadmin.php"> Admin</a>
-                 <a class="nav-link" href="LoginCom.html"> Comprobante</a>
+                 <a class="nav-link" href="recpdf.php"> Comprobante</a>
               </div>
            </div>
         </div>

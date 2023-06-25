@@ -88,21 +88,11 @@
         //conectamos a la base de datos
         $connection = mysqli_connect($host, $user, $pass);
 
-        //hacemos llamado al input del formulario
-        if (!$connection) {
-            echo "No se ha podido conectar con el servidor" . mysql_error();
-        }
-
         $datab = "dj_bd";
 
         //indicacmos seleccionar a la bd
         $db = mysqli_select_db($connection, $datab);
 
-        if (!$db) {
-             echo "No se ha podido encontrar la Tabla";
-        } else {
-             echo "<h3>Tabla seleccionada:</h3>";
-        }
     ?>
 
     <div class="bg-custom-gradient">
@@ -122,7 +112,7 @@
                  <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                  <a class="nav-link" href="contratacion.html">Contratación</a>
                  <a class="nav-link" href="loginAdmin.html"> Admin</a>
-                 <a class="nav-link" href="LoginCom.html"> Comprobante</a>
+                 <a class="nav-link" href="recpdf.php"> Comprobante</a>
               </div>
            </div>
         </div>

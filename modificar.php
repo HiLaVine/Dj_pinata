@@ -99,7 +99,7 @@
                  <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
                  <a class="nav-link" href="contratacion.html">Contratación</a>
                  <a class="nav-link" href="indexadmin.php"> Admin</a>
-                 <a class="nav-link" href="LoginCom.html"> Comprobante</a>
+                 <a class="nav-link" href="recpdf.php"> Comprobante</a>
               </div>
            </div>
         </div>

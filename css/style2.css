@@ -11,9 +11,10 @@
 }
 
 body {
+   font-family: 'Roboto';
    background: #4568DC;
-   background: -webkit-linear-gradient(to right, #1591C9, #FF26C6);
-   background: linear-gradient(tto right, #1591C9, #FF26C6);
+   background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+   background: linear-gradient(to right, #B06AB3, #4568DC);
    height: 1200px;
    display: block;
    justify-content: center;
@@ -96,7 +97,7 @@ select:valid~label{
    width: 0%;
    bottom: 0;
    position: absolute;
-   background: linear-gradient(to right, #1591C9, #FF26C6);
+   background: linear-gradient(to right, #B06AB3, #4568DC);
    transition: 0.3s ease width;
    left: 0;
 }
@@ -109,8 +110,8 @@ button{
    align-content: center;
    font-family: 'Roboto';
    background: #4568DC;
-   background: -webkit-linear-gradient(to right, #1591C9, #FF26C6);
-   background: linear-gradient(to right, #1591C9, #FF26C6);
+   background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
+   background: linear-gradient(to right, #B06AB3, #4568DC);
    border: none;
    display: block;
    width: 70%;
@@ -172,13 +173,3 @@ select {
 .copcion{
    display: none;
 }
-
-.cont {
-   max-width: 1500px;
-   margin: 0 auto;
-   padding: 20px;
-   border: 1px solid #ccc;
-   border-radius: 5px;
-   margin-top: 100px;
-   background-color: white;
- }

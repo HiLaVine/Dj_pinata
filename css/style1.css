@@ -8,6 +8,10 @@
     background-image: linear-gradient(to right, #1591C9, #FF26C6); /* Gradiente personalizado */
   }
 
+  body {
+    background-image: linear-gradient(to right, #1591C9, #FF26C6); /* Gradiente personalizado */
+  }
+
   .bg-custom-gradient-alt {
     background-color: linear-gradient(to right, #FC45FC,#26C65C); /* Gradiente personalizado */
   }
@@ -54,3 +58,6 @@
   .card:hover .back {
     transform: rotateY(360deg); /* Gira al hacer hover */
   }
+  .copcion{
+    display: none;
+ }

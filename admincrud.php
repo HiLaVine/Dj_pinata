@@ -128,7 +128,6 @@
             <th>No. PERSONAS</th>
             <th>HORARIO</th>
             <th>FOLIO</th>
-            <th>ACCIONES</th>
           </tr>
         </thead>
         <tbody>

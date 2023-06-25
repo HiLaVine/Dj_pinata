@@ -53,7 +53,7 @@
     $entidadFederativa = $fila['estado'];
     $alcaldia = $fila['alcaldia'];
     $evento = $fila['evento'];
-    $personas = $fila['npersonas'];
+    $personas = $fila['nPersonas'];
     $horario = $fila['horario'];
     $folio = $fila['folio'];
     $nombreArchivo = $folio . '.pdf';

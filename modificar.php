@@ -169,7 +169,7 @@
             <?php } ?>
             </div>
             <?php
-               $idClientess = $_GET['idC']; 
+                $idClientess = $_GET['idC']; 
                 $nombre = $_GET['nombre'];
                 $aPaterno = $_GET['apellidoP'];
                 $aMaterno = $_GET['apellidoM'];
@@ -181,7 +181,7 @@
                 $alcaldia = $_GET['alcaldia'];
                 $evento = $_GET['evento'];
                 $nPersonas = $_GET['personas'];
-                $horario = $_GET['horarios'];
+                $horario = $_GET['horario'];
 
                 $fechaEv = $_GET['fechaE'];
                 $lugar = $_GET['recinto'];
@@ -191,14 +191,16 @@
 
 
                 if ($nombre!=NULL&&$aPaterno!=NULL&&$aMaterno!=NULL&&$fechaN!=NULL&&$curp!=NULL&&$gmail!=NULL&&$telefono!=NULL&&$estado!=NULL&&$alcaldia!=NULL&&$evento!=NULL&&$nPersonas!=NULL&&$horario!=NULL&&$fechaEv!=NULL&&$lugar!=NULL&&$paquete!=NULL&&$folio!=NULL) {
-                     $sql3 = "UPDATE datosclientes SET nombre = '".$nombre."', aPaterno = '".$aPaterno."',aMaterno = '".$aMaterno."', fechaN = '".$fechaN."', CURP = '".$curp."', gmail = '".$gmail."',telefono = '".$telefono."',estado = '".$estado."',alcaldia = '".$alcaldia."',evento = '".$evento."',nPersonas = '".$nPersonas."',horario = '".$horario."', fechaE = '".$fechaEv."',recinto = '".$lugar."',paquete = '".$paquete."',folio = '".$folio."' WHERE idCliente = '".$idCliente."'";
+                     $sql3 = "UPDATE datosclientes SET nombre = '".$nombre."', aPaterno = '".$aPaterno."',aMaterno = '".$aMaterno."', fechaN = '".$fechaN."', CURP = '".$curp."', gmail = '".$gmail."',telefono = '".$telefono."',estado = '".$estado."',alcaldia = '".$alcaldia."',evento = '".$evento."',nPersonas = '".$nPersonas."',horario = '".$horario."', fechaEv = '".$fechaEv."',lugar = '".$lugar."',paquete = '".$paquete."',folio = '".$folio."' WHERE idCliente = '".$idClientess."'";
                     mysqli_query($connection,$sql3);
                     if ($nombre=1) {
                      header("location:admincrud.php");
                         }
                     }
-
             ?>
+            
+
+        ?>
     </div>
 
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -206,4 +208,3 @@
 
 </body>
 </html>
-

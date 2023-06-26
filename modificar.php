@@ -38,13 +38,13 @@
         <?php
 
             include 'conexion2.php';
-            $idCliente = $_GET['idCliente'];
+            $idClientess = $_GET['idCliente'];
             $sql = "SELECT * FROM datosclientes WHERE idCliente = '".$idCliente."'";
             $resultado = mysqli_query($connection,$sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
             ?>
             <div>
-                <form method="post">
+                <form>
                     <input type="hidden" name="idC" value="<?php echo $fila['idCliente']?>">
                     <label>Nombre:</label>
                     <input type="text" name="nombre" value="<?php echo $fila['nombre']?>">
@@ -120,24 +120,41 @@
                         <option value="Xochimilco">Xochimilco</option>
                     </select>
 
-                    <label>Tipo de Evento:</label>
-
-                    <select name="evento" size="1">
-                        <option value=<?php echo $fila['evento']?>><?php echo $fila['evento']?></option>
-                        <option value="Bautizo">Bautizo</option>
-                        <option value="Primera Comunion">Primera Comunion</option>
-                        <option value="XV Años">XV Años</option>
-                        <option value="Cumpleaños">Cumpleaños</option>
-                        <option value="Boda">Boda</option>
-                        <option value="Otros">Otros</option>
+                    <label for="evento">Tipo de Evento:</label>
+                    <select id="evento" name="evento" size="1">
+                    <option value=<?php echo $fila['evento']?>><?php echo $fila['evento']?></option>
+                        <option value="bautizo">Bautizo</option>
+                        <option value="primeraC">Primera Comunion</option>
+                        <option value="xv">XV Años</option>
+                        <option value="cumpleaños">Cumpleaños</option>
+                        <option value="boda">Boda</option>
                     </select>
 
-                    <label>Numero de Personas:</label>
-                    <input type="number" name="personas" value="<?php echo $fila['nPersonas']?>"><br><br>
-                    <label>Horarios disponibles:</label>
-                    
-                    <select id="horario" name="horarios" size="1">
-                        <option value=<?php echo $fila['horario']?>><?php echo $fila['horario']?></option>
+                    <label for="personas">Numero de Personas:</label>
+                    <input type="number" id="personas" name="personas" value="<?php echo $fila['nPersonas']?>"><span class="barra"></span>
+
+                    <label for="fnac">Fecha del evento</label>
+                        <input type="date" id="fechaE" name="fechaE" min="2023-01-01" max="2023-31-12" required value = "<?php echo $fila['fechaEv']?>">
+
+                        <br><br>
+
+                    <label for="paquete">Paquete</label>
+                      <select  aria-label="Default select example" id="paquete" name="paquete" required>
+                      <option value=<?php echo $fila['paquete']?>><?php echo $fila['paquete']?></option>
+                          <option value="Paquete básico">Paquete Básico</option>
+                          <option value="Paquete premium">Paquete Premium</option>
+                        </select>
+
+                    <label for="recinto">Salon o jardin</label>
+                        <select aria-label="Default select example" id="recinto" name="recinto" required>
+                        <option value=<?php echo $fila['lugar']?>><?php echo $fila['lugar']?></option>
+                            <option value="Jmayita">Jardin Mayita</option>
+                            <option value="IMITI">Salon IMITI</option>
+                            <option value="Luc34">Luc34</option>
+                        </select>
+
+                    <label for="horarios">Horarios disponibles:</label>
+                    <select id="horario" name="horario" size="1">
                         <option value="Viernes de 12:00pm - 2:00am">Viernes de 12:00pm - 2:00am</option>
                         <option value="Sabados de 2:00pm - 2:00am">Sabados de 2:00pm - 2:00am</option>
                         <option value="Domingos de 9:00am - 2:pm">Domingos de 9:00am - 2:pm</option>
@@ -151,7 +168,7 @@
             <?php } ?>
             </div>
             <?php
-                $idClientess = $_GET['idC']; 
+               $idClientess = $_GET['idC']; 
                 $nombre = $_GET['nombre'];
                 $aPaterno = $_GET['apellidoP'];
                 $aMaterno = $_GET['apellidoM'];
@@ -164,10 +181,16 @@
                 $evento = $_GET['evento'];
                 $nPersonas = $_GET['personas'];
                 $horario = $_GET['horarios'];
-                $folio = $_GET['folio'];
 
-                if ($nombre!=NULL&&$aPaterno!=NULL&&$aMaterno!=NULL&&$fechaN!=NULL&&$curp!=NULL&&$gmail!=NULL&&$telefono!=NULL&&$estado!=NULL&&$alcaldia!=NULL&&$evento!=NULL&&$nPersonas!=NULL&&$horario!=NULL&&$folio!=NULL) {
-                     $sql3 = "UPDATE datosclientes SET nombre = '".$nombre."', aPaterno = '".$aPaterno."',aMaterno = '".$aMaterno."', fechaN = '".$fechaN."', CURP = '".$curp."', gmail = '".$gmail."',telefono = '".$telefono."',estado = '".$estado."',alcaldia = '".$alcaldia."',evento = '".$evento."',nPersonas = '".$nPersonas."',horario = '".$horario."', folio = '".$folio."' WHERE idCliente = '".$idClientess."'";
+                $fechaEv = $_POST['fechaE'];
+                $lugar = $_POST['recinto'];
+                $paquete = $_POST['paquete'];
+
+                $folio = $_POST['folio'];
+
+
+                if ($nombre!=NULL&&$aPaterno!=NULL&&$aMaterno!=NULL&&$fechaN!=NULL&&$curp!=NULL&&$gmail!=NULL&&$telefono!=NULL&&$estado!=NULL&&$alcaldia!=NULL&&$evento!=NULL&&$nPersonas!=NULL&&$horario!=NULL&&$fechaEv!=NULL&&$lugar!=NULL&&$paquete!=NULL&&$folio!=NULL) {
+                     $sql3 = "UPDATE datosclientes SET nombre = '".$nombre."', aPaterno = '".$aPaterno."',aMaterno = '".$aMaterno."', fechaN = '".$fechaN."', CURP = '".$curp."', gmail = '".$gmail."',telefono = '".$telefono."',estado = '".$estado."',alcaldia = '".$alcaldia."',evento = '".$evento."',nPersonas = '".$nPersonas."',horario = '".$horario."', fechaE = '".$fechaEv."',recinto = '".$lugar."',paquete = '".$paquete."',folio = '".$folio."' WHERE idCliente = '".$idClientess."'";
                     mysqli_query($connection,$sql3);
                     if ($nombre=1) {
                      header("location:admincrud.php");

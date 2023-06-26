@@ -13,7 +13,7 @@ $desc=array (
 );
 $up=-63;
 $ut=44;
-$ttffile='C:\xampp\htdocs\Dj_pinata-main\tfpdf/font/unifont/DejaVuSans.ttf';
+$ttffile='C:\xampp\htdocs\Dj_pinata\tfpdf/font/unifont/DejaVuSans.ttf';
 $originalsize=757076;
 $fontkey='dejavu';
 ?>

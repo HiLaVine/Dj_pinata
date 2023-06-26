@@ -225,7 +225,7 @@
             $filas=mysqli_fetch_assoc($resultado2);            
         ?>
 
-        <div style="padding-left: 0px;"><button type="submit" class="enviar" style="text-align: center;"><a href="cpdf.php?idCliente=<?php echo $filas['idCliente']?>">Enviar y generar PDF</a></button></div>
+        <div style="padding-left: 0px;"><button type="button" class="enviar" style="text-align: center;"><a href="cpdf.php?idCliente=<?php echo $filas['idCliente']?>">Enviar y generar PDF</a></button></div>
         <div style="padding-left: 0px;"><button type="button"style="text-align: center;" value="Página anterior"><a href="eliminar2.php?idCliente=<?php echo $filas['idCliente']?>">Modificar</a></button></div>
         
     </div>

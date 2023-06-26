@@ -174,7 +174,7 @@
                     </div>
                     <div class="col-md-2 ml-auto" id="gpersonas">
                         <label for="personas">Número de personas</label>
-                        <input type="number" name="personas" class="form-control" id="personas" required pattern="^((([A-ZÁÉÍÓÚÑ]{1})[a-záéíóúñ]+\s?){1,3})$">
+                        <input type="number" name="personas" class="form-control" id="personas">
                     </div>
                 </div>
                 <br>
@@ -239,6 +239,18 @@
               $('#gopcion').hide();
             }
           });
+        });
+
+        const inputPersonas = document.getElementById("personas");
+
+        inputPersonas.addEventListener("input", function() {
+        const valor = parseInt(inputPersonas.value);
+  
+        if (isNaN(valor) || valor < 75 || valor > 200) {
+            inputPersonas.setCustomValidity("Ingresa un número entre 75 y 200");
+        } else {
+            inputPersonas.setCustomValidity("");
+            }
         });
       </script>
 </body>

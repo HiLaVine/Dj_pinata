@@ -106,141 +106,180 @@
     <br>
 
     <div class="container">
-      <p style="font-size: 30px ; text-align: center;">AGREGAR USUARIOS</p>
-      <br>
-        <form method="post" action="agregarusr.php" style="background-color:white; border-style: solid;  border:8px; border-radius:10px; border-color:white !important; padding:10px;">
-                  <div class="row form-group">
-                    <div class="col-md-3 ml-auto">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre" name="nombre"><span class="barra"></span>
+      <form method="post" action="agregarusr.php" style="background-color:white; border-style: solid;  border:8px; border-radius:10px; border-color:white !important; padding:10px;" id="registro">
+            <div class="title">
+            <p style="font-size: 30px ; text-align: center;">AGREGAR USUARIOS</p>
+            </div>
+            <!--Contacto-->
+            <fieldset>
+                <legend>Contacto</legend>
+                <div class="row form-group">
+                    <div class="col-md-4 ml-auto" id="gapellidoP">
+                        <label for="apellidoP">Primer Apellido</label>
+                        <input type="text" name="apellidoP" id="apellidoP" class="form-control" placeholder="Primer Apellido" >
                     </div>
-                    <div class="col-md-3 ml-auto">
-                    <label for="apellidoP">Apellido Paterno:</label>
-                    <input type="text" id="apellidoP" name="apellidoP"><span class="barra"></span>
+                    <div class="col-md-4 ml-auto" id="gapellidoM">
+                        <label for="apellidoM">Segundo Apellido</label>
+                        <input type="text" name="apellidoM" id="apellidoM" class="form-control" placeholder="Segundo Apellido" >
                     </div>
-                    <div class="col-md-3 ml-auto">
-                    <label for="apellidoM">Apellido Materno:</label>
-                    <input type="text" id="apellidoM" name="apellidoM"><span class="barra"></span>
+                    <div class="col-md-4 ml-auto" id="gnombre">
+                        <label for="nombre">Nombre (s)</label>
+                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombres" >
                     </div>
-                    <div class="col-md-3 ml-auto">
-                    <label for="fechaN">Fecha de Nacimiento</label>
-                    <input type="date" id="fechaN" name="fechaN"  max="2005-05-28" min="1945-05-28" required><span class="barra"></span>
+                </div>
+                <br>
+                <div class="row form-group" id="gfecha">
+                    <div class="col-md-6 ml-auto">
+                        <label for="fechaN">Fecha de Nacimiento</label>
+                        <input type="date" id="fechaN" name="fechaN" class="form-control pickDate" name="fnac" max="2005-05-28" min="1945-05-28" required >
                     </div>
-                  </div>
-                    <br><br>
-
-                    <label for="curp">CURP:</label>
-                    <input type="text" id="curp" name="curp"><span class="barra"></span>
-                    <label for="mail">Correo electronico:</label>
-                    <input type="email" id="mail" name="mail"><span class="barra"></span>
-                    <label for="telefono">Numero de Telefono:</label>
-                    <input type="text" id="telefono" name="telefono"><span class="barra"></span>
-
-                    <label for="entidadF">Entidad Federativa:</label>
-                    <select id="entidadF" name="entidadF" size="1">
-                    <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Aguascalientes">Aguascalientes</option>
-                        <option value="Baja California">Baja California</option>
-                        <option value="Baja California">Baja California</option>
-                        <option value="Campeche">Campeche</option>
-                        <option value="Chiapas">Chiapas</option>
-                        <option value="Chihuahua">Chihuahua</option>
-                        <option value="Ciudad de Mexico">Ciudad de Mexico</option>
-                        <option value="Coahuila">Coahuila</option>
-                        <option value="Colima">Colima</option>
-                        <option value="Durango">Durango</option>
-                        <option value="Guanajuato">Guanajuato</option>
-                        <option value="Guerrero">Guerrero</option>
-                        <option value="Hidalgo">Hidalgo</option>
-                        <option value="Jalisco">Jalisco</option>
-                        <option value="Mexico">Mexico</option>
-                        <option value="Michoacan">Michoacan</option>
-                        <option value="Morelos">Morelos</option>
-                        <option value="Nayarit">Nayarit</option>
-                        <option value="Nuevo Leon">Nuevo Leon</option>
-                        <option value="Oaxaca">Oaxaca</option>
-                        <option value="Puebla">Puebla</option>
-                        <option value="Queretaro">Queretaro</option>
-                        <option value="QuintanaR">Quintana Roo</option>
-                        <option value="San Luis Potosi">San Luis Potosi</option>
-                        <option value="Sinaloa">Sinaloa</option>
-                        <option value="Sonora">Sonora</option>
-                        <option value="Tabasco">Tabasco</option>
-                        <option value="Tamaulipas">Tamaulipas</option>
-                        <option value="Tlaxcala">Tlaxcala</option>
-                        <option value="Veracruz">Veracruz</option>
-                        <option value="Yucatan">Yucatan</option>
-                        <option value="Zacatecas">Zacatecas</option>
-                    </select>
-
-                    <br><br>
-
-                    <label for="alcaldia">Alcaldia:</label>
-                    <select id="alcaldia" name="alcaldia" size="1">
-                      <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Alvaro Obregon">Álvaro Obregón</option>
-                        <option value="Azcapotzalco">Azcapotzalco</option>
-                        <option value="Benito Juarez">Benito Juárez</option>
-                        <option value="Coyoacan">Coyoacán</option>
-                        <option value="Cuajimalpa de Morelos">Cuajimalpa de Morelos</option>
-                        <option value="Cuauhtemoc">Cuauhtémoc</option>
-                        <option value="Gustavo A. Madero">Gustavo A. Madero</option>
-                        <option value="Iztacalco">Iztacalco</option>
-                        <option value="Iztapalapa">Iztapalapa</option>
-                        <option value="Magdalena Contreras">Magdalena Contreras</option>
-                        <option value="Miguel Hidalgo">Miguel Hidalgo</option>
-                        <option value="Milpa Alta">Milpa Alta</option>
-                        <option value="Tlahuac">Tláhuac</option>
-                        <option value="Tlalpan">Tlalpan</option>
-                        <option value="Venustiano Carranza">Venustiano Carranza</option>
-                        <option value="Xochimilco">Xochimilco</option>
-                    </select>
-
-                    <label for="evento">Tipo de Evento:</label>
-                    <select id="evento" name="evento" size="1">
-                      <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="bautizo">Bautizo</option>
-                        <option value="primeraC">Primera Comunion</option>
-                        <option value="xv">XV Años</option>
-                        <option value="cumpleaños">Cumpleaños</option>
-                        <option value="boda">Boda</option>
-                    </select>
-
-                    <label for="personas">Numero de Personas:</label>
-                    <input type="number" id="personas" name="personas"><span class="barra"></span>
-
-                    <label for="fnac">Fecha del evento</label>
-                        <input type="date" id="fechaE" name="fechaE" min="2023-01-01" max="2023-31-12" required >
-
-                        <br><br>
-
-                    <label for="paquete">Paquete</label>
-                      <select  aria-label="Default select example" id="paquete" name="paquete" required>
-                          <option value="" disabled selected>Selecciona una opción</option>
-                          <option value="Paquete basico">Paquete Básico</option>
-                          <option value="Paquete premium">Paquete Premium</option>
+                    <div class="col-md-6 ml-auto" id="gcurp">
+                        <label for="curp">CURP</label>
+                        <input type="text" class="form-control" name="curp" id="curp" required pattern="^([A-Z]{4}[0-9]{6}[A-Z]{6}[A-Z0-9]{2})$">
+                    </div>
+                </div>
+                <br>
+                <div class="row form-group" id="gtelefono">
+                    <div class="col-md-6 ml-auto">
+                        <label for="telefono">Tel. Celular</label>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" required pattern="^[0-9]{10}$" maxlength="10">
+                    </div>
+                    <div class="col-md-6 ml-auto" id="gmail">
+                        <label for="mail">Correo Electronico</label>
+                        <input type="email" name="mail" id="mail" class="form-control" required pattern="^([a-záéíóúñüA-ZÁÉÍÓÚÑÜ0-9.\-_/\\]+@\w+(\.\w+)+)$">
+                    </div>
+                </div>
+                <br>
+                <div class="row form-group">
+                    <div class="col-md-6 ml-auto">
+                        <label for="entidadF">Entidad Federativa</label>
+                        <select class="form-select" aria-label="Default select example" id="entidadF" name="entidadF" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Aguascalientes">Aguascalientes</option>
+                            <option value="Baja California Norte">Baja California</option>
+                            <option value="Baja California Sur">Baja California Sur</option>
+                            <option value="Campeche">Campeche</option>
+                            <option value="Chiapas">Chiapas</option>
+                            <option value="Chihuahua">Chihuahua</option>
+                            <option value="Ciudad de Mexico">Ciudad de México</option>
+                            <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
+                            <option value="Colima">Colima</option>
+                            <option value="Durango">Durango</option>
+                            <option value="Guanajuato">Guanajuato</option>
+                            <option value="Guerrero">Guerrero</option>
+                            <option value="Hidalgo">Hidalgo</option>
+                            <option value="Jalisco">Jalisco</option>
+                            <option value="Estado de Mexico">Estado de México</option>
+                            <option value="Michoacan">Michoacán</option>
+                            <option value="Morelos">Morelos</option>
+                            <option value="Nayarit">Nayarit</option>
+                            <option value="Nuevo Leon">Nuevo León</option>
+                            <option value="Oaxaca">Oaxaca</option>
+                            <option value="Puebla">Puebla</option>
+                            <option value="Queretaro">Querétaro</option>
+                            <option value="Quintana Roo">Quintana Roo</option>
+                            <option value="San Luis Potosi">San Luis Potosí</option>
+                            <option value="Sinaloa">Sinaloa</option>
+                            <option value="Sonora">Sonora</option>
+                            <option value="Tabasco">Tabasco</option>
+                            <option value="Tamaulipas">Tamaulipas</option>
+                            <option value="Tlaxcala">Tlaxcala</option>
+                            <option value="Veracruz">Veracruz</option>
+                            <option value="Yucatan">Yucatán</option>
+                            <option value="Zacatecas">Zacatecas</option>
                         </select>
-
-                    <label for="recinto">Salon o jardin</label>
-                        <select aria-label="Default select example" id="recinto" name="recinto" required>
+                    </div>
+                    <div class="col-md-6 ml-auto">
+                        <label for="alcaldia">Alcaldia</label>
+                        <select class="form-select" aria-label="Default select example" id="alcaldia" name="alcaldia" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Alvaro Obregon">Álvaro Obregón</option>
+                            <option value="Azcapotzalco">Azcapotzalco</option>
+                            <option value="Benito Juarez">Benito Juárez</option>
+                            <option value="Coyoacan">Coyoacán</option>
+                            <option value="Cuajimalpa de Morelos">Cuajimalpa de Morelos</option>
+                            <option value="Cuauhtemoc">Cuauhtémoc</option>
+                            <option value="Gustavo A. Madero">Gustavo A. Madero</option>
+                            <option value="Iztacalco">Iztacalco</option>
+                            <option value="Iztapalapa">Iztapalapa</option>
+                            <option value="Magdalena Contreras">Magdalena Contreras</option>
+                            <option value="Miguel Hidalgo">Miguel Hidalgo</option>
+                            <option value="Milpa Alta">Milpa Alta</option>
+                            <option value="Tlahuac">Tláhuac</option>
+                            <option value="Tlalpan">Tlalpan</option>
+                            <option value="Venustiano Carranza">Venustiano Carranza</option>
+                            <option value="Xochimilco">Xochimilco</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <hr>
+ 
+            <!--Evento-->
+            <fieldset>
+                <legend>Evento</legend>
+                <div class="row form-group">
+                    <div class="col-md-5 ml-auto" id="gevento">
+                        <label for="evento">Tipo de evento</label>
+                        <select class="form-select" aria-label="Default select example" id="evento" name="evento" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Bautizo">Bautizo</option>
+                            <option value="Primera Comunion">Primera Comunion</option>
+                            <option value="XV Años">XV Años</option>
+                            <option value="Cumpleaños">Cumpleaños</option>
+                            <option value="Boda">Boda</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5 ml-auto" id="gopcion">
+                        <label for="opcion">Otro</label>
+                        <div class="formInput" id="opcion">
+                        <input class="form-control" type="text" id="opcion" name="opcion">
+                        </div>
+                    </div>
+                    <div class="col-md-2 ml-auto" id="gpersonas">
+                        <label for="personas">Número de personas</label>
+                        <input type="number" name="personas" class="form-control" id="personas">
+                    </div>
+                </div>
+                <br>
+                <div class="row form-group">
+                    <div class="col-md-3 ml-auto" id="grecinto">
+                        <label for="recinto">Salon o jardin</label>
+                        <select class="form-select" aria-label="Default select example" id="recinto" name="recinto" required>
                             <option value="" disabled selected>Selecciona una opción</option>
                             <option value="Jardin mayita">Jardin Mayita</option>
                             <option value="IMITI">Salon IMITI</option>
                             <option value="Luc34">Luc34</option>
                         </select>
-
-                    <label for="horarios">Horarios disponibles:</label>
-                    <select id="horario" name="horario" size="1">
-                    <option value="" disabled selected>Selecciona una opción</option>
-                        <option value="Viernes de 12:00pm - 2:00am">Viernes de 12:00pm - 2:00am</option>
-                        <option value="Sabados de 2:00pm - 2:00am">Sabados de 2:00pm - 2:00am</option>
-                        <option value="Domingos de 9:00am - 2:pm">Domingos de 9:00am - 2:pm</option>
-                    </select>
-
-                    
-                    <br><br>
+                    </div>
+                    <div class="col-md-3 ml-auto" id="ghorarios">
+                        <label for="horario">Horarios</label>
+                        <select class="form-select" aria-label="Default select example" id="horario" name="horario" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Viernes de 12:00pm - 2:00am">Viernes de 12:00pm - 2:00am</option>
+                            <option value="Sabado de 2:00pm - 2:00am">Sabados de 2:00pm - 2:00am</option>
+                            <option value="Domingo de 9:00am - 2:pm">Domingos de 9:00am - 2:pm</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 ml-auto">
+                        <label for="fnac">Fecha del evento</label>
+                        <input type="date" id="fechaE" class="form-control pickDate" name="fechaE" min="2023-01-01" max="2023-31-12" required >
+                    </div>
+                    <div class="col-md-3 ml-auto" id="ghorarios">
+                        <label for="paquete">Paquete</label>
+                        <select class="form-select" aria-label="Default select example" id="paquete" name="paquete" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Paquete basico">Paquete Básico</option>
+                            <option value="Paquete premium">Paquete Premium</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+            <div>
                     <button type="submit" class="enviar" style="text-align: center;">AGREGAR</button>
-      </form>
+            </div>      
+        </form>
 
     </div>
 

@@ -3,82 +3,12 @@
 <head>
   <title>Inicio de sesión</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/sphp.css">
   <link rel="icon" href="imgs/DJ.png" type="image/png">
   
 </head>
 
-<style type = "text/css">
 
-        button{
-            align-content: center;
-            font-family: 'Roboto';
-            background: #4568DC;
-            background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
-            background: linear-gradient(to right, #B06AB3, #4568DC);
-            border: none;
-            display: block;
-            width: 10%;
-            margin: 10px auto;
-            color: #fff;
-            height: 45px;
-            cursor: pointer;
-        }
-
-        .bg-custom {
-            background-color: #000002; /* Color personalizado (en este caso, magenta) */
-        }
-
-        .bg-custom-gradient {
-             background-image: linear-gradient(to right, #1591C9, #FF26C6); /* Gradiente personalizado */
-        }
-
-        .bg-custom-gradient-alt {
-            background-color: linear-gradient(to right, #FC45FC,#26C65C); /* Gradiente personalizado */
-        }
-
-        .cont {
-            max-width: 2200px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-top: 100px;
-            background-color: white;
-            text-align: left;
-            align-items: center;
-        }
-
-        table {
-            border: solid 2px #7e7c7c;
-            border-collapse: collapse;
-            justify-content: center; 
-            align-items: center;
-            width: 600px;
-            margin: auto;
-        }
-
-        th{
-            background-color: lightgrey;
-            border: solid  1px grey;
-            padding: 2px;
-            text-align: left;
-            font-size: 20px;
-        }
-
-        td, h1 {
-            border: solid 1px grey;
-            font-size: 20px;
-            padding: 2px;
-            text-align: left;
-        }
-
-        h2{
-            font-size: 20px;
-        }
-
-
-    </style>
 
 <body>
   <?php
@@ -108,7 +38,7 @@
            </div>
         </div>
      </nav>
-  <div class="cont">
+  <div class="cont row">
     <div>
       <p style="font-size: 30px; text-align: center;">USUARIOS REGISTRADOS</p>
       <table>
@@ -128,6 +58,10 @@
             <th>No. PERSONAS</th>
             <th>HORARIO</th>
             <th>FOLIO</th>
+            <th>RECINTO</th>
+            <th>PAQUETE</th>
+            <th>FECHA DEL EVENTO</th>
+            <th>ACCIONES</th>
           </tr>
         </thead>
         <tbody>
@@ -146,8 +80,11 @@
             <td><?php echo $filas['estado']?></td>
             <td><?php echo $filas['alcaldia']?></td>
             <td><?php echo $filas['evento']?></td>
-            <td><?php echo $filas['npersonas']?></td>
+            <td><?php echo $filas['nPersonas']?></td>
             <td><?php echo $filas['horario']?></td>
+            <td><?php echo $filas['folio']?></td>
+            <td><?php echo $filas['folio']?></td>
+            <td><?php echo $filas['folio']?></td>
             <td><?php echo $filas['folio']?></td>
             <td>
               <a href="modificar.php?idCliente=<?php echo $filas['idCliente']?>">Editar</a>
@@ -184,6 +121,7 @@
 
                     <label for="entidadF">Entidad Federativa:</label>
                     <select id="entidadF" name="entidadF" size="1">
+                    <option value="" disabled selected>Selecciona una opción</option>
                         <option value="Aguascalientes">Aguascalientes</option>
                         <option value="Baja California">Baja California</option>
                         <option value="Baja California">Baja California</option>
@@ -222,6 +160,7 @@
 
                     <label for="alcaldia">Alcaldia:</label>
                     <select id="alcaldia" name="alcaldia" size="1">
+                      <option value="" disabled selected>Selecciona una opción</option>
                         <option value="Alvaro Obregon">Álvaro Obregón</option>
                         <option value="Azcapotzalco">Azcapotzalco</option>
                         <option value="Benito Juarez">Benito Juárez</option>
@@ -242,6 +181,7 @@
 
                     <label for="evento">Tipo de Evento:</label>
                     <select id="evento" name="evento" size="1">
+                      <option value="" disabled selected>Selecciona una opción</option>
                         <option value="bautizo">Bautizo</option>
                         <option value="primeraC">Primera Comunion</option>
                         <option value="xv">XV Años</option>
@@ -252,12 +192,34 @@
                     <label for="personas">Numero de Personas:</label>
                     <input type="number" id="personas" name="personas"><span class="barra"></span>
 
+                    <label for="fnac">Fecha del evento</label>
+                        <input type="date" id="fechaE" name="fechaE" min="2023-01-01" max="2023-31-12" required >
+
+                        <br><br>
+
+                    <label for="paquete">Paquete</label>
+                      <select  aria-label="Default select example" id="paquete" name="paquete" required>
+                          <option value="" disabled selected>Selecciona una opción</option>
+                          <option value="Pbasico">Paquete Básico</option>
+                          <option value="Ppremium">Paquete Premium</option>
+                        </select>
+
+                    <label for="recinto">Salon o jardin</label>
+                        <select aria-label="Default select example" id="recinto" name="recinto" required>
+                            <option value="" disabled selected>Selecciona una opción</option>
+                            <option value="Jmayita">Jardin Mayita</option>
+                            <option value="IMITI">Salon IMITI</option>
+                            <option value="XV Años">XV Años</option>
+                        </select>
+
                     <label for="horarios">Horarios disponibles:</label>
                     <select id="horario" name="horario" size="1">
                         <option value="Viernes de 12:00pm - 2:00am">Viernes de 12:00pm - 2:00am</option>
                         <option value="Sabados de 2:00pm - 2:00am">Sabados de 2:00pm - 2:00am</option>
                         <option value="Domingos de 9:00am - 2:pm">Domingos de 9:00am - 2:pm</option>
                     </select>
+
+                    
                     <br><br>
                     <button type="submit" class="enviar" style="text-align: center;">AGREGAR</button>
       </form>

@@ -133,8 +133,13 @@
         $evento = $_POST['evento'];
         $nPersonas = $_POST['personas'];
         $horario = $_POST['horario'];
+
+        $fechaEv = $_POST['fechaE'];
+        $lugar = $_POST['recinto'];
+        $paquete = $_POST['paquete'];
+        
         $separador = "-";
-        $separada = explode($separador, $fechaN);
+        $separada = explode($separador, $fechaEv);
         $unida = implode($separada);
         $folio = $unida.$curp;
 
@@ -183,6 +188,18 @@
         echo "<td>$evento</td>";
         echo "</tr>";
         echo "<tr>";
+        echo "<th>Fecha de evento: </th>";
+        echo "<td>$fechaEv</td>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<th>Lugar del evento: </th>";
+        echo "<td>$lugar</td>";
+        echo "</tr>";
+        echo "<tr>";
+        echo "<th>Paquete: </th>";
+        echo "<td>$paquete</td>";
+        echo "</tr>";
+        echo "<tr>";
         echo "<th>Personas: </th>";
         echo "<td>$nPersonas</td>";
         echo "</tr>";
@@ -198,9 +215,9 @@
     <div> 
         <br>
         <?php
-        $instruction_SQL = "INSERT INTO datosclientes (nombre, aPaterno, aMaterno, fechaN, CURP, gmail, telefono, estado, alcaldia, evento, nPersonas, horario, folio)
+        $instruction_SQL = "INSERT INTO datosclientes (nombre, aPaterno, aMaterno, fechaN, CURP, gmail, telefono, estado, alcaldia, evento, nPersonas, horario, paquete, lugar, fechaEv, folio)
              VALUES 
-                ('$nombre', '$aPaterno', '$aMaterno', '$fechaN', '$curp', '$gmail', '$telefono', '$estado', '$alcaldia','$evento','$nPersonas' ,'$horario' , '$folio')";
+                ('$nombre', '$aPaterno', '$aMaterno', '$fechaN', '$curp', '$gmail', '$telefono', '$estado', '$alcaldia','$evento','$nPersonas' ,'$horario' ,'$paquete', '$lugar','$fechaEv', '$folio')";
             $resultado = mysqli_query($connection, $instruction_SQL);
 
             $consulta = "SELECT idCliente FROM datosclientes WHERE folio = '".$folio."'";

@@ -49,6 +49,9 @@
     $personas = $fila['nPersonas'];
     $horario = $fila['horario'];
     $folio = $fila['folio'];
+    $fechaEv = $fila['fechaEv'];
+    $recinto = $fila['lugar'];
+    $paquete = $fila['paquete'];
     $nombreArchivo = $folio . '.pdf';
 
 
@@ -56,7 +59,7 @@
 
     $pdf->SetFont('DejaVuBold', '', 16);
     $pdf->Cell(0, 10, 'Gracias por contratar nuestros servicios de DJ', 0, 1, 'C');
-    $pdf->Ln(10);
+    $pdf->Ln(3);
 
     $pdf->SetFont('DejaVu', '', 12);
     $pdf->Cell(0, 10, 'Estimado(a) ' . $nombre . ' ' . $apellidoPaterno . ' ' . $apellidoMaterno . ',', 0, 1);
@@ -65,7 +68,6 @@
 
     $pdf->SetFont('DejaVuBold', '', 12);
     $pdf->Cell(0, 10, 'Resumen de la información proporcionada:', 0, 1);
-    $pdf->Ln(5);
 
     $pdf->SetFont('DejaVu', '', 12);
     $pdf->Cell(50, 10, 'Nombre:', 0, 0);
@@ -98,6 +100,15 @@
     $pdf->Cell(50, 10, 'Evento:', 0, 0);
     $pdf->Cell(0, 10, $evento, 0, 1);
 
+    $pdf->Cell(50, 10, 'Fecha del evento:', 0, 0);
+    $pdf->Cell(0, 10, $fechaEv, 0, 1);
+
+    $pdf->Cell(50, 10, 'Salón:', 0, 0);
+    $pdf->Cell(0, 10, $recinto, 0, 1);
+
+    $pdf->Cell(50, 10, 'Paquete:', 0, 0);
+    $pdf->Cell(0, 10, $paquete, 0, 1);
+
     $pdf->Cell(50, 10, 'Personas:', 0, 0);
     $pdf->Cell(0, 10, $personas, 0, 1);
 
@@ -106,18 +117,16 @@
 
     $pdf->Cell(50, 10, 'Folio:', 0, 0);
     $pdf->Cell(0, 10, $folio, 0, 1);
-    $pdf->Ln(10);
+    $pdf->Ln(5);
 
     $pdf->SetFont('DejaVu', '', 12);
     $pdf->Cell(0, 10, '¡Esperamos que disfrute al máximo su fiesta con nuestra música!', 0, 1);
 
-    //$pdf->Ln(10);
-
     $pdf->Cell(0, 10, 'Si tiene alguna pregunta adicional o requiere más información,', 0, 1);
-    $pdf->Cell(0, 10, 'no dude en contactarnos.', 0, 1);
+    $pdf->Cell(0, 10, 'no dude en contactarnos a dj_pinata@gmail.com.', 0, 1);
     
     $pdf->Cell(0, 10, 'Atentamente', 0, 1);
-    //$pdf->Ln(10);
+    
 
     $yPos = $pdf->GetY(); 
     $pdf->Image('imgs/DJletras.png', 80, $yPos, 50);
@@ -125,3 +134,4 @@
     $pdf->SetTitle($folio);
     $pdf->Output();
 ?>
+

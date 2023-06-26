@@ -3,92 +3,20 @@
 <head>
   <title>Inicio de sesión</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style1.css">
+  <link rel="stylesheet" href="css/sphp.css">
   <link rel="icon" href="imgs/DJ.png" type="image/png">
   
 </head>
-
-<style type = "text/css">
-
-        button{
-            align-content: center;
-            font-family: 'Roboto';
-            background: #4568DC;
-            background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);
-            background: linear-gradient(to right, #B06AB3, #4568DC);
-            border: none;
-            display: block;
-            width: 10%;
-            margin: 10px auto;
-            color: #fff;
-            height: 45px;
-            cursor: pointer;
-        }
-
-        .bg-custom {
-            background-color: #000002; /* Color personalizado (en este caso, magenta) */
-        }
-
-        .bg-custom-gradient {
-             background-image: linear-gradient(to right, #1591C9, #FF26C6); /* Gradiente personalizado */
-        }
-
-        .bg-custom-gradient-alt {
-            background-color: linear-gradient(to right, #FC45FC,#26C65C); /* Gradiente personalizado */
-        }
-
-        .cont {
-            max-width: 1800px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            margin-top: 100px;
-            background-color: white;
-            text-align: left;
-            align-items: center;
-        }
-
-        table {
-            border: solid 2px #7e7c7c;
-            border-collapse: collapse;
-            justify-content: center; 
-            align-items: center;
-            width: 600px;
-            margin: auto;
-        }
-
-        th{
-            background-color: lightgrey;
-            border: solid  1px grey;
-            padding: 2px;
-            text-align: left;
-            font-size: 20px;
-        }
-
-        td, h1 {
-            border: solid 1px grey;
-            font-size: 20px;
-            padding: 2px;
-            text-align: left;
-        }
-
-        h2{
-            font-size: 20px;
-        }
-
-
-    </style>
 
 <body>
   
     <div class="bg-custom-gradient">
     <nav class="navbar navbar-light navbar-expand-lg bg-light ">
         <div class="container-fluid">
-           <a class="navbar-brand" href="#">
+           <a class="navbar-brand" href="index.html">
            <img src="imgs/DJ.png" alt="" width="50" class="d-inline-block align-text-top">
            </a>
-           <a class="navbar-brand" href="#">
+           <a class="navbar-brand" href="index.html">
             <img src="imgs/djLetrasSinFondo.png" alt="" width="120" class="d-inline-block align-text-top">
             </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -105,7 +33,7 @@
         </div>
      </nav>
 
-    <div class = "cont">
+    <div class = "cont1">
         <br><p style="font-size: 30px ; text-align: center;">MODIFICAR USUARIOS</p><br>
         <?php
 
@@ -116,7 +44,7 @@
             while ($fila = mysqli_fetch_assoc($resultado)) {
             ?>
             <div>
-                <form>
+                <form method="post">
                     <input type="hidden" name="idC" value="<?php echo $fila['idCliente']?>">
                     <label>Nombre:</label>
                     <input type="text" name="nombre" value="<?php echo $fila['nombre']?>">

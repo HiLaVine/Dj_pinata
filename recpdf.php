@@ -32,7 +32,7 @@
      </nav>
      <br>
      <div class="container " >
-      <br><br><br><br><br><br><br>
+      <br><br><br>
         <div class="row " style="border-radius:12px; background-color: #ffffff;">
               <p align="center" style="color: black ">Si deseas volver a descargar tu Comprobante en PDF introduce tu fecha de nacimiento en el formato yyyy/mm/dd y tu curp. </p> 
         </div>

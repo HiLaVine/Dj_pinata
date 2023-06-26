@@ -57,10 +57,10 @@
             <th>EVENTO</th>
             <th>No. PERSONAS</th>
             <th>HORARIO</th>
-            <th>FOLIO</th>
-            <th>RECINTO</th>
             <th>PAQUETE</th>
+            <th>RECINTO</th>
             <th>FECHA DEL EVENTO</th>
+            <th>FOLIO</th>
             <th>ACCIONES</th>
           </tr>
         </thead>
@@ -82,9 +82,9 @@
             <td><?php echo $filas['evento']?></td>
             <td><?php echo $filas['nPersonas']?></td>
             <td><?php echo $filas['horario']?></td>
-            <td><?php echo $filas['folio']?></td>
-            <td><?php echo $filas['folio']?></td>
-            <td><?php echo $filas['folio']?></td>
+            <td><?php echo $filas['paquete']?></td>
+            <td><?php echo $filas['lugar']?></td>
+            <td><?php echo $filas['fechaEv']?></td>
             <td><?php echo $filas['folio']?></td>
             <td>
               <a href="modificar.php?idCliente=<?php echo $filas['idCliente']?>">Editar</a>
@@ -200,20 +200,21 @@
                     <label for="paquete">Paquete</label>
                       <select  aria-label="Default select example" id="paquete" name="paquete" required>
                           <option value="" disabled selected>Selecciona una opción</option>
-                          <option value="Pbasico">Paquete Básico</option>
-                          <option value="Ppremium">Paquete Premium</option>
+                          <option value="Paquete basico">Paquete Básico</option>
+                          <option value="Paquete premium">Paquete Premium</option>
                         </select>
 
                     <label for="recinto">Salon o jardin</label>
                         <select aria-label="Default select example" id="recinto" name="recinto" required>
                             <option value="" disabled selected>Selecciona una opción</option>
-                            <option value="Jmayita">Jardin Mayita</option>
+                            <option value="Jardin mayita">Jardin Mayita</option>
                             <option value="IMITI">Salon IMITI</option>
-                            <option value="XV Años">XV Años</option>
+                            <option value="Luc34">Luc34</option>
                         </select>
 
                     <label for="horarios">Horarios disponibles:</label>
                     <select id="horario" name="horario" size="1">
+                    <option value="" disabled selected>Selecciona una opción</option>
                         <option value="Viernes de 12:00pm - 2:00am">Viernes de 12:00pm - 2:00am</option>
                         <option value="Sabados de 2:00pm - 2:00am">Sabados de 2:00pm - 2:00am</option>
                         <option value="Domingos de 9:00am - 2:pm">Domingos de 9:00am - 2:pm</option>

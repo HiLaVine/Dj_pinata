@@ -38,7 +38,7 @@
         <?php
 
             include 'conexion2.php';
-            $idClientess = $_GET['idCliente'];
+            $idCliente = $_GET['idCliente'];
             $sql = "SELECT * FROM datosclientes WHERE idCliente = '".$idCliente."'";
             $resultado = mysqli_query($connection,$sql);
             while ($fila = mysqli_fetch_assoc($resultado)) {
@@ -155,6 +155,7 @@
 
                     <label for="horarios">Horarios disponibles:</label>
                     <select id="horario" name="horario" size="1">
+                        <option value=<?php echo $fila['horario']?>><?php echo $fila['horario']?></option>
                         <option value="Viernes de 12:00pm - 2:00am">Viernes de 12:00pm - 2:00am</option>
                         <option value="Sabados de 2:00pm - 2:00am">Sabados de 2:00pm - 2:00am</option>
                         <option value="Domingos de 9:00am - 2:pm">Domingos de 9:00am - 2:pm</option>
@@ -182,24 +183,22 @@
                 $nPersonas = $_GET['personas'];
                 $horario = $_GET['horarios'];
 
-                $fechaEv = $_POST['fechaE'];
-                $lugar = $_POST['recinto'];
-                $paquete = $_POST['paquete'];
+                $fechaEv = $_GET['fechaE'];
+                $lugar = $_GET['recinto'];
+                $paquete = $_GET['paquete'];
 
-                $folio = $_POST['folio'];
+                $folio = $_GET['folio'];
 
 
                 if ($nombre!=NULL&&$aPaterno!=NULL&&$aMaterno!=NULL&&$fechaN!=NULL&&$curp!=NULL&&$gmail!=NULL&&$telefono!=NULL&&$estado!=NULL&&$alcaldia!=NULL&&$evento!=NULL&&$nPersonas!=NULL&&$horario!=NULL&&$fechaEv!=NULL&&$lugar!=NULL&&$paquete!=NULL&&$folio!=NULL) {
-                     $sql3 = "UPDATE datosclientes SET nombre = '".$nombre."', aPaterno = '".$aPaterno."',aMaterno = '".$aMaterno."', fechaN = '".$fechaN."', CURP = '".$curp."', gmail = '".$gmail."',telefono = '".$telefono."',estado = '".$estado."',alcaldia = '".$alcaldia."',evento = '".$evento."',nPersonas = '".$nPersonas."',horario = '".$horario."', fechaE = '".$fechaEv."',recinto = '".$lugar."',paquete = '".$paquete."',folio = '".$folio."' WHERE idCliente = '".$idClientess."'";
+                     $sql3 = "UPDATE datosclientes SET nombre = '".$nombre."', aPaterno = '".$aPaterno."',aMaterno = '".$aMaterno."', fechaN = '".$fechaN."', CURP = '".$curp."', gmail = '".$gmail."',telefono = '".$telefono."',estado = '".$estado."',alcaldia = '".$alcaldia."',evento = '".$evento."',nPersonas = '".$nPersonas."',horario = '".$horario."', fechaE = '".$fechaEv."',recinto = '".$lugar."',paquete = '".$paquete."',folio = '".$folio."' WHERE idCliente = '".$idCliente."'";
                     mysqli_query($connection,$sql3);
                     if ($nombre=1) {
                      header("location:admincrud.php");
                         }
                     }
-            ?>
-            
 
-        ?>
+            ?>
     </div>
 
   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

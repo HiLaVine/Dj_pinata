@@ -2,8 +2,16 @@
 <html>
 <head>
   <title>Inicio de sesión</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/sphp.css">
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/sphp.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
   <link rel="icon" href="imgs/DJ.png" type="image/png">
   
 </head>
@@ -97,19 +105,28 @@
 
     <br>
 
-    <div>
+    <div class="container">
       <p style="font-size: 30px ; text-align: center;">AGREGAR USUARIOS</p>
       <br>
-        <form method="post" action="agregarusr.php">
+        <form method="post" action="agregarusr.php" style="background-color:white; border-style: solid;  border:8px; border-radius:10px; border-color:white !important; padding:10px;">
+                  <div class="row form-group">
+                    <div class="col-md-3 ml-auto">
                     <label for="nombre">Nombre:</label>
                     <input type="text" id="nombre" name="nombre"><span class="barra"></span>
+                    </div>
+                    <div class="col-md-3 ml-auto">
                     <label for="apellidoP">Apellido Paterno:</label>
                     <input type="text" id="apellidoP" name="apellidoP"><span class="barra"></span>
+                    </div>
+                    <div class="col-md-3 ml-auto">
                     <label for="apellidoM">Apellido Materno:</label>
                     <input type="text" id="apellidoM" name="apellidoM"><span class="barra"></span>
+                    </div>
+                    <div class="col-md-3 ml-auto">
                     <label for="fechaN">Fecha de Nacimiento</label>
                     <input type="date" id="fechaN" name="fechaN"  max="2005-05-28" min="1945-05-28" required><span class="barra"></span>
-
+                    </div>
+                  </div>
                     <br><br>
 
                     <label for="curp">CURP:</label>

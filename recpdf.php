@@ -34,14 +34,14 @@
      <div class="container " >
       <br><br><br>
         <div class="row " style="border-radius:12px; background-color: #ffffff;">
-              <p align="center" style="color: black ">Si deseas volver a descargar tu Comprobante en PDF introduce tu fecha de nacimiento en el formato yyyy/mm/dd y tu curp. </p> 
+              <p align="center" style="color: black ">Si deseas volver a descargar tu Comprobante en PDF introduce la fecha del evento en el formato yyyy/mm/dd y tu curp. </p> 
         </div>
 
   <div class="cont">
     <h2>Recuperacion del PDF</h2>
     <form method="post" action="genpdf.php">
       <div class="mb-3">
-        <label for="username" class="form-label">Fecha de nacimiento:</label>
+        <label for="username" class="form-label">Fecha del evento:</label>
         <input type="text" class="form-control" id="fechaN" name="fechaN" required>
       </div>
       <div class="mb-3">
